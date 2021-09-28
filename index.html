@@ -1,44 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Stylesheet -->
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
 </head>
+
 <body>
 
-  Bill
+    <dic class="main-container">
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <h1 class="main-title">SPLI<br>TTER</h1>
 
-  Number of People
+        <div class="main-content">
+            <div class="left-container">
+                <!-- Bill Section -->
+                <div class="bill-section">
 
-  Tip Amount
-  / person
+                    <div class="title">
+                        <h6>Bill</h6>
+                        <h6 class="error-message" id="bill-error-message">Can't be neagtive or zero</h6>
+                    </div>
 
-  Total
-  / person
+                    <input type="number" id="bill-charge" name="bill-charge" placeholder="0">
+                </div>
 
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#"></a>.
-  </div>
+                <!-- Select Tip Section -->
+                <div class="select-tip-section">
+
+                    <div class="title">
+                        <h6>Select Tip %</h6>
+                        <h6 class="error-message" id="tip-error-message">Can't be neagtive</h6>
+                    </div>
+                    <div class="tip-options">
+                        <button class="tip-value">5%</button><button class="tip-value">10%</button><button
+                            class="tip-value">15%</button><button class="tip-value">25%</button><button
+                            class="tip-value">50%</button>
+                        <input type="number" id="custom-tip" class="tip-value" name="custom-tip" placeholder="Custom">
+                    </div>
+                </div>
+
+                <!-- Number of People Section -->
+                <div class="number-of-people-section">
+
+                    <div class="title">
+                        <h6>Number of People</h6>
+                        <h6 class="error-message" id="people-error-message">Can't be negative or zero</h6>
+                    </div>
+
+                    <input type="number" id="people-count" name="people-count" placeholder="0">
+
+                </div>
+
+            </div>
+
+            <div class="right-container">
+                <div class="information">
+                    <div class="amount-detail">
+                        <p class="tip-amount">Tip Amount<br>/ person</p>
+                        <p class="amount" id="total-tip-per-person">$0.00</p>
+                    </div>
+
+                    <div class="amount-detail">
+                        <p class="tip-amount">Total<br>/ person</p>
+                        <p class="amount" id="total-amount-per-person">$0.00</p>
+                    </div>
+                </div>
+
+                <button class="reset-button">Reset</button>
+
+            </div>
+        </div>
+        <script src="./script/main.js"></script>
+    </dic>
+
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Serap, Emirhan, Berfin</a>.
+    </div>
 </body>
+
 </html>
