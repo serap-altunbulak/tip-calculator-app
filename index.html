@@ -15,6 +15,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- Stylesheet -->
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <!-- Bootstrap -->
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -32,7 +35,7 @@
 
 <body>
 
-    <dic class="main-container">
+    <div class="main-container">
 
         <h1 class="main-title">SPLI<br>TTER</h1>
 
@@ -43,10 +46,10 @@
 
                     <div class="title">
                         <h6>Bill</h6>
-                        <h6 class="error-message" id="bill-error-message">Can't be neagtive or zero</h6>
+                        <h6 class="error-message" id="bill-error-message">Can't be negative or zero</h6>
                     </div>
 
-                    <input type="number" id="bill-charge" name="bill-charge" placeholder="0">
+                    <input type="number" class="form-control" id="bill-charge" name="bill-charge" placeholder="0">
                 </div>
 
                 <!-- Select Tip Section -->
@@ -54,13 +57,17 @@
 
                     <div class="title">
                         <h6>Select Tip %</h6>
-                        <h6 class="error-message" id="tip-error-message">Can't be neagtive</h6>
+                        <h6 class="error-message" id="tip-error-message">Can't be negative</h6>
                     </div>
                     <div class="tip-options">
-                        <button class="tip-value">5%</button><button class="tip-value">10%</button><button
-                            class="tip-value">15%</button><button class="tip-value">25%</button><button
-                            class="tip-value">50%</button>
-                        <input type="number" id="custom-tip" class="tip-value" name="custom-tip" placeholder="Custom">
+                        <div class="tip-buttons">
+                            <button id="tip-5" class="tip-value btn">5%</button>
+                            <button id="tip-10" class="tip-value btn">10%</button>
+                            <button id="tip-15" class="tip-value btn">15%</button>
+                            <button id="tip-25" class="tip-value btn">25%</button>
+                            <button id="tip-50" class="tip-value btn">50%</button>
+                            <input type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
+                        </div>
                     </div>
                 </div>
 
@@ -72,7 +79,7 @@
                         <h6 class="error-message" id="people-error-message">Can't be negative or zero</h6>
                     </div>
 
-                    <input type="number" id="people-count" name="people-count" placeholder="0">
+                    <input type="number" class="form-control" id="people-count" name="people-count" placeholder="0">
 
                 </div>
 
@@ -80,29 +87,30 @@
 
             <div class="right-container">
                 <div class="information">
-                    <div class="amount-detail">
-                        <p class="tip-amount">Tip Amount<br>/ person</p>
-                        <p class="amount" id="total-tip-per-person">$0.00</p>
-                    </div>
+                  
+                    <p class="tip-amount">Tip Amount<br><span>/person</span></p>
+                    <p class="amount" id="total-tip-per-person">$0.00</p>
+                    <p class="tip-amount">Total<br><span>/person</span></p>
+                    <p class="amount" id="total-amount-per-person">$0.00</p>
 
-                    <div class="amount-detail">
-                        <p class="tip-amount">Total<br>/ person</p>
-                        <p class="amount" id="total-amount-per-person">$0.00</p>
-                    </div>
                 </div>
-
-                <button class="reset-button">Reset</button>
+                
+                <button class="reset-button btn container-fluid">RESET</button>
 
             </div>
         </div>
+        <!-- Script -->
         <script src="./script/main.js"></script>
-    </dic>
+        <!-- Script -->
+        
+        
+    </div>
 
-
-    <div class="attribution">
+        <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="#">Serap, Emirhan, Berfin</a>.
-    </div>
+        </div>
+    
 </body>
 
 </html>
