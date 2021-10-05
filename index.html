@@ -49,7 +49,7 @@
                         <h6 class="error-message" id="bill-error-message">Can't be negative or zero</h6>
                     </div>
 
-                    <input type="number" class="form-control" id="bill-charge" name="bill-charge" placeholder="0">
+                    <input type="number" class="form-control" id="bill-charge" name="bill-charge" value="0">
                 </div>
 
                 <!-- Select Tip Section -->
@@ -61,12 +61,12 @@
                     </div>
                     <div class="tip-options">
                         <div class="tip-buttons">
-                            <button id="tip-5" class="tip-value btn">5%</button>
-                            <button id="tip-10" class="tip-value btn">10%</button>
-                            <button id="tip-15" class="tip-value btn">15%</button>
-                            <button id="tip-25" class="tip-value btn">25%</button>
-                            <button id="tip-50" class="tip-value btn">50%</button>
-                            <input type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
+                            <button onclick="tip(event)" value="5" id="tip-5" class="tip-value btn">5%</button>
+                            <button onclick="tip(event)" value="10" id="tip-10" class="tip-value btn">10%</button>
+                            <button onclick="tip(event)" value="15" id="tip-15" class="tip-value btn">15%</button>
+                            <button onclick="tip(event)" value="25" id="tip-25" class="tip-value btn">25%</button>
+                            <button onclick="tip(event)" value="50" id="tip-50" class="tip-value btn">50%</button>
+                            <input onchange="customSide(event)" type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <h6 class="error-message" id="people-error-message">Can't be negative or zero</h6>
                     </div>
 
-                    <input type="number" class="form-control" id="people-count" name="people-count" placeholder="0">
+                    <input onchange="tipAmount(tip)" type="number" class="form-control" id="people-count" name="people-count" value="0">
 
                 </div>
 
@@ -95,7 +95,7 @@
 
                 </div>
                 
-                <button class="reset-button btn container-fluid">RESET</button>
+                <button onclick="resetButton()" class="reset-button btn container-fluid">RESET</button>
 
             </div>
         </div>
