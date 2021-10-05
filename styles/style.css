@@ -125,3 +125,17 @@ input {
     text-align: right;
     color: var(--cyan-very-dark);
 }
+
+#bill-charge{
+    background-image: url(../images/dollar.png);
+    background-position: left;
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
+
+#people-count{
+    background-image: url(../images/person.png);
+    background-position: left;
+    background-size: 15px;
+    background-repeat: no-repeat;
+}
