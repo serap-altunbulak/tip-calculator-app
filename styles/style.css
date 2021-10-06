@@ -110,6 +110,7 @@ body{
 .error-message {
     color: red;
     visibility: hidden;
+    text-align: right;
 }
 
 .select-tip-section, .number-of-people-section {
@@ -124,18 +125,16 @@ input[type=number]::-webkit-outer-spin-button {
 input {
     text-align: right;
     color: var(--cyan-very-dark);
+    box-sizing: border-box;
 }
 
-#bill-charge{
-    background-image: url(../images/dollar.png);
-    background-position: left;
-    background-size: 15px;
-    background-repeat: no-repeat;
+.icon-inside{
+    position: relative;
 }
 
-#people-count{
-    background-image: url(../images/person.png);
-    background-position: left;
-    background-size: 15px;
-    background-repeat: no-repeat;
+.icon-inside i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    padding: 10px 10px;
 }

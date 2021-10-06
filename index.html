@@ -15,6 +15,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
     <!-- Stylesheet -->
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Icons -->
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <!-- Bootstrap -->
@@ -48,8 +51,10 @@
                         <h6>Bill</h6>
                         <h6 class="error-message" id="bill-error-message">Can't be negative or zero</h6>
                     </div>
-
-                    <input onclick="this.value = ''; document.querySelector('.error-message').style.visibility = 'visible'" type="number" class="form-control" id="bill-charge" name="bill-charge" value="0">
+                    <div class="icon-inside">
+                        <i class="fa fa-usd" aria-hidden="true"></i>
+                        <input style="background-color: hsl(187, 82%, 94%);" onclick="this.value = ''; document.querySelector('.error-message').style.visibility = 'visible'" type="number" class="form-control" id="bill-charge" name="bill-charge" value="0">
+                    </div>
                 </div>
 
                 <!-- Select Tip Section -->
@@ -66,7 +71,7 @@
                             <button onclick="tip(event)" value="15" id="tip-15" class="tip-value btn">15%</button>
                             <button onclick="tip(event)" value="25" id="tip-25" class="tip-value btn">25%</button>
                             <button onclick="tip(event)" value="50" id="tip-50" class="tip-value btn">50%</button>
-                            <input onkeyup="this.value.indexOf('-') ? document.querySelector('#tip-error-message').style.visibility = 'visible' : null" onchange="customSide(event)" type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
+                            <input style="background-color: hsl(187, 82%, 94%);" onkeyup="this.value.indexOf('-') ? document.querySelector('#tip-error-message').style.visibility = 'visible' : null" onchange="customSide(event)" type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
                         </div>
                     </div>
                 </div>
@@ -78,9 +83,10 @@
                         <h6>Number of People</h6>
                         <h6 class="error-message" id="people-error-message">Can't be negative or zero</h6>
                     </div>
-
-                    <input onclick="this.value = ''; document.querySelector('#people-error-message').style.visibility = 'visible'" onchange="tipAmount(tip)" type="number" class="form-control" id="people-count" name="people-count" value="0">
-
+                    <div class="icon-inside">
+                        <i class="fa fa-user icon"></i>
+                        <input style="background-color: hsl(187, 82%, 94%);" onclick="this.value = ''; document.querySelector('#people-error-message').style.visibility = 'visible'" onchange="tipAmount(tip)" type="number" class="form-control" id="people-count" name="people-count" value="0">
+                    </div>
                 </div>
 
             </div>
