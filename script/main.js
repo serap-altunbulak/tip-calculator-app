@@ -53,14 +53,6 @@ const errorFunc = function() {
     people.value !== "" ? peopleError.style.visibility = "hidden" : null;
 }
 
-/* bill.onkeyup = function errorFunc() {
-    const errorMessage = document.querySelector('.error-message');
-    bill.value !== "" ? errorMessage.style.visibility = "hidden" : null;
-}
-people.onkeyup = function errorFunc() {
-    const errorMessage = document.querySelector('#people-error-message');
-    people.value !== "" ? errorMessage.style.visibility = "hidden" : null;
-} */
 bill.addEventListener("keyup", errorFunc);
 people.addEventListener("keyup", errorFunc);
 customInput.addEventListener("keyup", errorFunc);
