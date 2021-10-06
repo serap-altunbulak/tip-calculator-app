@@ -49,7 +49,7 @@
                         <h6 class="error-message" id="bill-error-message">Can't be negative or zero</h6>
                     </div>
 
-                    <input type="number" class="form-control" id="bill-charge" name="bill-charge" value="0">
+                    <input onclick="this.value = ''; document.querySelector('.error-message').style.visibility = 'visible'" type="number" class="form-control" id="bill-charge" name="bill-charge" value="0">
                 </div>
 
                 <!-- Select Tip Section -->
@@ -66,7 +66,7 @@
                             <button onclick="tip(event)" value="15" id="tip-15" class="tip-value btn">15%</button>
                             <button onclick="tip(event)" value="25" id="tip-25" class="tip-value btn">25%</button>
                             <button onclick="tip(event)" value="50" id="tip-50" class="tip-value btn">50%</button>
-                            <input onchange="customSide(event)" type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
+                            <input onkeyup="this.value.indexOf('-') ? document.querySelector('#tip-error-message').style.visibility = 'visible' : null" onchange="customSide(event)" type="number" id="custom-tip" class="tip-value form-control" name="custom-tip" placeholder="Custom">
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                         <h6 class="error-message" id="people-error-message">Can't be negative or zero</h6>
                     </div>
 
-                    <input onchange="tipAmount(tip)" type="number" class="form-control" id="people-count" name="people-count" value="0">
+                    <input onclick="this.value = ''; document.querySelector('#people-error-message').style.visibility = 'visible'" onchange="tipAmount(tip)" type="number" class="form-control" id="people-count" name="people-count" value="0">
 
                 </div>
 
@@ -97,7 +97,7 @@
                 
                 <button onclick="resetButton()" class="reset-button btn container-fluid">RESET</button>
 
-            </div>
+            </div> 
         </div>
         <!-- Script -->
         <script src="./script/main.js"></script>

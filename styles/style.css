@@ -109,7 +109,7 @@ body{
 
 .error-message {
     color: red;
-    display: none;
+    visibility: hidden;
 }
 
 .select-tip-section, .number-of-people-section {
